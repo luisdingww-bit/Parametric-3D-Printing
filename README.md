@@ -1,29 +1,24 @@
-﻿# Parametric-3D-Printing 🖨️🏗️
+# Parametric-3D-Printing
 
-> Computational geometry and digital fabrication experiments.
+Computational-geometry experiments for digital fabrication — parametric wall panels and their print settings.
 
----
+> **Status: definition + config (partial).** The Grasshopper script and print profile are real; fabricated outputs (STL / photos) are to be added.
 
-## Workflow
+## What's here
 
-```
-Grasshopper → Rhino → STL Export → Cura Slicing → 3D Printer
-```
+- **`wall_generator.cs`** — a Grasshopper **C# script component** generating variable-density wall panels with sin / cos height variation.
+- **`STL/print_settings.yaml`** — a complete **Bambu Lab X1C** print profile (PLA, gyroid infill, temps, supports).
+- **`Research/material_notes.md`** — PLA / PETG / TPU print-test log.
 
-## Repository
+## Honest notes
 
-```
-Parametric-3D-Printing/
-├── Grasshopper/     ← .gh definitions & code
-│   └── wall_generator.cs
-├── STL/             ← Export models + print settings
-│   └── print_settings.yaml
-├── Photos/          ← Process documentation
-└── Research/        ← Material testing & references
-    └── material_notes.md
-```
+- No `.gh` definition file, exported **STL**, or **photos** are committed yet — the fabrication workflow is currently documentation + script only.
+- To reproduce: load `wall_generator.cs` into a Grasshopper C# component, bake the panels, slice with the provided YAML profile.
 
-## Equipment
-- **Printer:** Bambu Lab X1C
-- **Material:** PLA / PETG / TPU
-- **Software:** Rhino 7, Grasshopper, Cura, Bambu Studio
+## Tech
+
+Grasshopper / Rhino C# scripting · YAML config
+
+## License
+
+MIT
